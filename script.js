@@ -8,3 +8,10 @@ const computeFactorialIt= (n) => {
    return sum
 }
 console.log(computeFactorialIt(5));
+
+
+const computeFactorialRec = (n) => {
+    return n === 0 ? 1 : n * computeFactorialRec(n - 1);
+}
+
+console.log(computeFactorialRec(5));
