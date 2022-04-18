@@ -29,3 +29,9 @@ const computePowerIt2 = (n,p) =>{
 }
 console.log(computePowerIt(2, 3));
 console.log(computePowerIt2(2, 3));
+
+const computePowerRec = (n, p) =>{
+    return p === 0 ? 1: n * computePowerRec(n, (p - 1));
+
+}
+console.log(computePowerRec(2,3));
