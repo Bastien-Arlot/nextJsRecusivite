@@ -56,3 +56,24 @@ const computeSquareRoot = (n,p) => {
     return p * p === n ? p :  computeSquareRoot(n, (p+1));
 }
 console.log(computeSquareRoot(121,1));
+
+const isPrimeNumber = (n) => {
+    if (n <= 1) {
+        return false;
+    }
+
+    let i = 2;
+    const prime = (n, i) => {
+        if (n === i) {
+            return true;
+        }
+        if (n % i === 0) {
+            return false;
+        }
+        return prime(n, i + 1);
+    };
+
+    return prime(n, i);
+};
+
+console.log(isPrimeNumber(9));
