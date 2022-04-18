@@ -15,3 +15,17 @@ const computeFactorialRec = (n) => {
 }
 
 console.log(computeFactorialRec(5));
+
+const computePowerIt = (n, p) => {
+    let sum = n**p;
+    return sum;
+}
+const computePowerIt2 = (n,p) =>{
+    let sum = 1;
+    for(let i = 1; i <= p; i++){
+        sum *= n;
+    }
+    return sum;
+}
+console.log(computePowerIt(2, 3));
+console.log(computePowerIt2(2, 3));
