@@ -77,3 +77,10 @@ const isPrimeNumber = (n) => {
 };
 
 console.log(isPrimeNumber(9));
+
+const findSupPrime = (n) => {
+    return isPrimeNumber(n) ? n : findSupPrime(n+1);
+};
+
+console.log(findSupPrime(7));
+
