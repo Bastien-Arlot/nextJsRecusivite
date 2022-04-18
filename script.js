@@ -27,11 +27,32 @@ const computePowerIt2 = (n,p) =>{
     }
     return sum;
 }
-console.log(computePowerIt(2, 3));
+console.log(computePowerIt(2, 6));
 console.log(computePowerIt2(2, 3));
 
 const computePowerRec = (n, p) =>{
     return p === 0 ? 1: n * computePowerRec(n, (p - 1));
 
 }
-console.log(computePowerRec(2,3));
+console.log(computePowerRec(2,6));
+//Not my way but account for all case
+const computePerfectSquareRoot = (n) => {
+    const sqrt = (n, i) => {
+        if (i * i > n) {
+            return `${n} isn't a perfect square`;
+        }
+        if (i * i === n) {
+            return i;
+        }
+        return sqrt(n, i + 1);
+    };
+    let i = 1;
+    return sqrt(n, i);
+};
+
+console.log(computePerfectSquareRoot(121));
+//My way to do it but don't account for number with no square root ( or square root that aint whole number).
+const computeSquareRoot = (n,p) => {
+    return p * p === n ? p :  computeSquareRoot(n, (p+1));
+}
+console.log(computeSquareRoot(121,1));
